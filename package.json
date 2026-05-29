@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-ban-fr",
+  "version": "0.1.0",
+  "description": "Base Adresse Nationale (BAN) MCP — France's official keyless geocoding API",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "ban-fr"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-ban-fr"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
