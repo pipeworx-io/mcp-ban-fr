@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-ban-fr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Base Adresse Nationale (BAN) MCP — France's official keyless geocoding API",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-e0211c9fd11a4086bbc70415b58be6d73fb7587471467407d5af7fbea5be5ff9",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-095e97d63069be6d82c4c52e50f4abd46fe5a70c834f12a48dcfd47be5754d0e",
+    "sourceCommit": "454041882179fae560c06e770b6b7a2f33970015"
   }
 }
