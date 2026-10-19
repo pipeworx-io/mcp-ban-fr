@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/ban-fr",
   "title": "Ban Fr",
-  "description": "Base Adresse Nationale (BAN) MCP — France's official keyless geocoding API",
-  "version": "0.1.2",
+  "description": "Base Adresse Nationale (BAN) MCP — France's official keyless geocoding API…",
+  "version": "0.1.3",
   "websiteUrl": "https://pipeworx.io/packs/ban-fr",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-ban-fr",
