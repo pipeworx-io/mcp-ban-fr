@@ -1,0 +1,103 @@
+[
+  {
+    "name": "geocode",
+    "description": "Forward-geocode a French address, street, locality or commune. Returns scored GeoJSON matches (score 0-1) with label, coordinates, postcode, citycode (INSEE) and context. France only.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "q": {
+          "type": "string",
+          "description": "Free-text query, e.g. \"8 bd du port\" or \"rue de la paix paris\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (default 5, server caps at 20)."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "housenumber",
+            "street",
+            "locality",
+            "municipality"
+          ],
+          "description": "Restrict to a feature type."
+        },
+        "postcode": {
+          "type": "string",
+          "description": "Filter by 5-digit postal code, e.g. \"95000\"."
+        },
+        "citycode": {
+          "type": "string",
+          "description": "Filter by INSEE commune code, e.g. \"95127\"."
+        },
+        "autocomplete": {
+          "type": "boolean",
+          "description": "Treat q as a partial/autocomplete prefix (default false)."
+        },
+        "lat": {
+          "type": "number",
+          "description": "Latitude to bias/prioritise results geographically (pair with lon)."
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude to bias/prioritise results geographically (pair with lat)."
+        }
+      },
+      "required": [
+        "q"
+      ]
+    }
+  },
+  {
+    "name": "reverse_geocode",
+    "description": "Reverse-geocode a coordinate to the nearest French address/feature. Returns scored GeoJSON matches with label, postcode, citycode (INSEE), context and distance (metres). France only.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude (WGS84)."
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude (WGS84)."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "housenumber",
+            "street",
+            "locality",
+            "municipality"
+          ],
+          "description": "Restrict to a feature type."
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "search_municipality",
+    "description": "Look up a French commune (municipality) by name to resolve its INSEE citycode, postcode, population and centre coordinates. Shortcut for geocode with type=municipality.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "q": {
+          "type": "string",
+          "description": "Commune name, e.g. \"montpellier\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (default 5)."
+        }
+      },
+      "required": [
+        "q"
+      ]
+    }
+  }
+]
